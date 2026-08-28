@@ -1,0 +1,48 @@
+/* General page styles — loud, chaotic, intentionally ugly */
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: hotpink;
+    /* neon pink background */
+    background-image: url("UGLY_IMADEIT2\ -\ Copy.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+}
+
+/* h1 uses HEX color */
+h1 {
+    color: #9ACD32;
+    /* yellow green */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* h2 uses RGB color */
+h2 {
+    color: rgb(255, 69, 0);
+    /* neon orange-red */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Blockquote styling — transparent, loud, and ugly */
+blockquote {
+    background-color: rgba(255, 255, 0, 0.5);
+    /* transparent yellow */
+    border-left: 10px dashed red;
+    /* thick ugly border */
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Center tag styling */
+center {
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Additional note: this is intentionally hideous */
