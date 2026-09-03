@@ -1,0 +1,33 @@
+/* Image gallery styling */
+.gallery-pic {
+    max-width: 300px;
+    width: 300px;
+    height: 220px;
+    display: block;
+    /* keeps images neatly sized */
+    margin: 10px;
+    /* spacing between images */
+    border: 2px solid #ccc;
+    /* light border wrapper */
+    border-radius: 8px;
+    /* rounded corners */
+}
+
+/* Navigation link styling */
+.nav-link {
+    display: inline-block;
+    padding: 8px 14px;
+    background-color: #e0e0e0;
+    /* desaturated button look */
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 5px;
+    border: 1px solid #b5b5b5;
+}
+
+.nav-link:hover {
+    background-color: #cfcfcf;
+    /* slightly darker hover */
+    color: #000;
+}
