@@ -31,3 +31,8 @@
     /* slightly darker hover */
     color: #000;
 }
+
+/* Page background color */
+body {
+    background-color: rgb(95, 115, 138);
+}
