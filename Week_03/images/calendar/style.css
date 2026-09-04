@@ -1,0 +1,36 @@
+/* The table collapse borders and fill the page */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Title bigger and bold */
+caption {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Styling all the table headers and cells */
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 10px;
+}
+
+/* The birthday cell to stand out */
+.birthday {
+    background-color: #bad2f1;
+    border: 1px solid #0a3d80;
+}
+
+/* Birthday image small */
+.birthday img {
+    max-width: 30px;
+    height: auto;
+}
+
+/* Light grey page background */
+body {
+    background-color: #d0d0d0;
+}
