@@ -1,0 +1,106 @@
+/* ============================
+   CSS VARIABLES (3 required)
+   ============================ */
+:root {
+    --primary-purple: #582C83;
+    --card-bg: #f4f4f8;
+    --shadow: rgba(0, 0, 0, 0.25);
+}
+
+/* ============================
+   BOX-SIZING RESET
+   ============================ */
+* {
+    box-sizing: border-box;
+}
+
+/* ============================
+   PAGE STYLING
+   ============================ */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8e8f0;
+    padding: 20px;
+}
+
+/* Header text-shadow requirement */
+header h1 {
+    color: var(--primary-purple);
+    text-shadow: 2px 2px 4px var(--shadow);
+    /* desaturated shadow */
+}
+
+/* ============================
+   COLUMN CARD LAYOUT
+   ============================ */
+.column-card {
+    display: inline-block;
+    /* side-by-side columns */
+    width: 48%;
+    /* fits two columns */
+    background-color: var(--card-bg);
+    border: 1px solid #ccc;
+    /* desaturated border */
+    border-radius: 8px;
+    /* rounded corners */
+    padding: 20px;
+    margin: 1%;
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* ============================
+   TOOLTIP STYLING
+   ============================ */
+.tooltip {
+    position: relative;
+    /* parent becomes positioning anchor */
+    display: inline-block;
+    /* keeps it inline with text */
+    border-bottom: 1px dashed black;
+    cursor: help;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    /* hidden by default */
+    opacity: 0;
+    /* fully transparent */
+    transition: opacity 0.3s;
+    /* smooth fade-in */
+
+    width: 180px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+
+    position: absolute;
+    /* positioned relative to .tooltip */
+    bottom: 125%;
+    /* above the parent */
+    left: 50%;
+    margin-left: -90px;
+    /* centers the tooltip */
+}
+
+/* Hover state: reveal tooltip */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    /* becomes visible */
+    opacity: 1;
+    /* fade-in */
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+    margin-top: 40px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--primary-purple);
+    font-weight: bold;
+}
