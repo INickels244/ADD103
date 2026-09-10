@@ -1,0 +1,56 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2F4F6F;
+    /* dark steel blue */
+    padding: 20px;
+    line-height: 1.6;
+    color: white;
+    /* makes text readable on dark background */
+}
+
+/* Main heading */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Outer unordered list */
+ul {
+    list-style-type: square;
+    /* square bullets */
+    margin-left: 25px;
+    padding-left: 10px;
+}
+
+/* Ordered lists using ABC */
+ol {
+    list-style-type: upper-alpha;
+    /* A, B, C */
+    margin-left: 30px;
+    padding-left: 15px;
+}
+
+/* Deep nested unordered lists */
+ul ul {
+    list-style-type: circle;
+    /* circle bullets for level 3 */
+    margin-left: 25px;
+}
+
+/* List item spacing */
+li {
+    margin-bottom: 8px;
+}
+
+/* Footer link */
+footer {
+    margin-top: 40px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #E0E8FF;
+    /* soft light blue for readability */
+    font-weight: bold;
+}
