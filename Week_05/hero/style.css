@@ -1,0 +1,111 @@
+/* Base Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 20px 20px;
+}
+
+/* 1. PARENT FLEX CONTAINER (.hero) */
+.hero {
+    display: flex;
+    /* Flexbox context */
+    align-items: center;
+    /* Vertically centers left & right sides */
+    background-color: #96a3b0;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* 2. CHILD ITEMS (50/50 Split) */
+.hero-text {
+    flex-basis: 50%;
+    /* 50% width allocation */
+    padding: 50px 40px;
+}
+
+.hero-img {
+    flex-basis: 50%;
+    /* 50% width allocation */
+    line-height: 0;
+}
+
+/* 3. TEXT & NESTED STYLES */
+.badge {
+    display: inline-block;
+    background-color: #e7f1ff;
+    color: #0d6efd;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #063f78;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background-color: #074c91;
+    transform: translateY(-1px);
+}
+
+/* 4. FLUID IMAGE CONTAINER */
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    /* Crops image cleanly to fill the right half */
+    display: block;
+}
+
+/* FOOTER STYLES */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+footer a {
+    color: #063f78;
+    text-decoration: none;
+    font-weight: 600;
+}
