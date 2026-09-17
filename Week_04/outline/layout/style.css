@@ -1,106 +1,118 @@
-/* ============================
-   CSS VARIABLES (3 required)
-   ============================ */
+/* 1. Global Variables & Resets */
 :root {
-    --primary-purple: #582C83;
-    --card-bg: #f4f4f8;
-    --shadow: rgba(0, 0, 0, 0.25);
+    --brand-dark-blue: #1B365D;
+    --brand-gold: #D1A153;
+    --text-dark: #333333;
+    --bg-light: #F9F9F9;
+    --border-desaturated: #CCCCCC;
 }
 
-/* ============================
-   BOX-SIZING RESET
-   ============================ */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* ============================
-   PAGE STYLING
-   ============================ */
 body {
     font-family: Arial, sans-serif;
-    background-color: #e8e8f0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
     padding: 20px;
 }
 
-/* Header text-shadow requirement */
-header h1 {
-    color: var(--primary-purple);
-    text-shadow: 2px 2px 4px var(--shadow);
-    /* desaturated shadow */
+/* 2. Header & Text Effects */
+header {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-/* ============================
-   COLUMN CARD LAYOUT
-   ============================ */
+.page-title {
+    color: var(--brand-dark-blue);
+    font-size: 2.5rem;
+    /* Desaturated text-shadow  */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 3. Main Layout & Inline-Block Columns */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .column-card {
     display: inline-block;
-    /* side-by-side columns */
+    vertical-align: top;
     width: 48%;
-    /* fits two columns */
-    background-color: var(--card-bg);
-    border: 1px solid #ccc;
-    /* desaturated border */
-    border-radius: 8px;
-    /* rounded corners */
-    padding: 20px;
     margin: 1%;
-    box-shadow: 0 4px 8px var(--shadow);
+    padding: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-desaturated);
+    border-radius: 8px;
 }
 
-/* ============================
-   TOOLTIP STYLING
-   ============================ */
+.column-card h2 {
+    color: var(--brand-dark-blue);
+    margin-bottom: 10px;
+}
+
+/* 4. Callout Aside Panel */
+.callout-box {
+    margin: 20px 1%;
+    padding: 15px 20px;
+    background-color: #FFFDF5;
+    border-left: 5px solid var(--brand-gold);
+    border-radius: 4px;
+}
+
+/* 5. Pure CSS Interactive Tooltips */
 .tooltip {
     position: relative;
-    /* parent becomes positioning anchor */
     display: inline-block;
-    /* keeps it inline with text */
-    border-bottom: 1px dashed black;
+    border-bottom: 1px dashed var(--brand-dark-blue);
     cursor: help;
+    color: var(--brand-dark-blue);
+    font-weight: bold;
 }
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    /* hidden by default */
-    opacity: 0;
-    /* fully transparent */
-    transition: opacity 0.3s;
-    /* smooth fade-in */
-
     width: 180px;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--text-dark);
+    color: #FFFFFF;
     text-align: center;
     border-radius: 6px;
     padding: 8px;
-
     position: absolute;
-    /* positioned relative to .tooltip */
     bottom: 125%;
-    /* above the parent */
     left: 50%;
     margin-left: -90px;
-    /* centers the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-weight: normal;
+    font-size: 0.85rem;
+    z-index: 10;
 }
 
-/* Hover state: reveal tooltip */
 .tooltip:hover .tooltiptext {
     visibility: visible;
-    /* becomes visible */
     opacity: 1;
-    /* fade-in */
 }
 
-/* ============================
-   FOOTER
-   ============================ */
+/* 6. Footer Navigation Links */
 footer {
+    text-align: center;
     margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-desaturated);
+    font-size: 0.9rem;
 }
 
 footer a {
+    color: var(--brand-dark-blue);
     text-decoration: none;
-    color: var(--primary-purple);
-    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
