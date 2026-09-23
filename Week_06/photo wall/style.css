@@ -1,0 +1,113 @@
+/* Base Resets & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* Hero Section: Centered Stack Layout */
+.hero {
+    display: flex;
+    flex-direction: column;
+    /* Stacks text on top, image below */
+    align-items: center;
+    /* Centers items horizontally */
+    justify-content: center;
+    /* Centers items vertically within container */
+    text-align: center;
+    /* Centers heading and paragraph text */
+
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 3rem 2rem;
+    gap: 20px;
+    border-bottom: 2px solid #1e293b;
+}
+
+.hero-text {
+    max-width: 600px;
+    /* Prevents text lines from getting too wide */
+    width: 100%;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    color: #f8fafc;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+    /* Controls maximum width of hero image */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Main Content Container */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Centers the "Cat Gallery" heading */
+.container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: center;
+    /* Centers the text horizontally */
+}
+
+/* CSS GRID IMPLEMENTATION */
+.photo-wall {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* IMAGE CONTROL */
+.photo-wall img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.photo-wall img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #0f172a;
+    color: #94a3b8;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #c5c5c5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
