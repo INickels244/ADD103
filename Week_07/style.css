@@ -1,0 +1,101 @@
+/* Universal Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #bdbdbd;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Footer Styling */
+header,
+footer {
+    background-color: #171e2c;
+    color: #ffffff;
+    padding: 20px 30px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Footer sits directly under the card container */
+footer {
+    padding: 25px 30px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 0.95rem;
+}
+
+footer a:hover {
+    color: #a5c2f0;
+}
+
+/* ==========================================================================
+   DEFAULT (Mobile First Layout)
+   ========================================================================== */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #273349;
+    border-top: 2px solid #111722;
+    border-bottom: 2px solid #111722;
+    padding: 30px;
+    width: 100%;
+    gap: 25px;
+}
+
+/* Square avatar with thin dark border */
+.avatar {
+    width: 180px;
+    height: 180px;
+    border: 1px solid #111722;
+    object-fit: cover;
+    background-color: #ffffff;
+}
+
+.info h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.info h3 {
+    font-size: 1.15rem;
+    color: #a5c2f0;
+    margin-bottom: 16px;
+}
+
+.info p {
+    font-size: 0.95rem;
+    color: #e0e6ed;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   DESKTOP BREAKPOINT (700px+)
+   ========================================================================== */
+
+@media (min-width: 700px) {
+    .card {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        padding: 40px 60px;
+        gap: 30px;
+    }
+}
