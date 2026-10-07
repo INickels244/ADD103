@@ -21,7 +21,6 @@ body {
     background-color: #1f3044;
     /* Darker steel navy */
     border-bottom: 3px solid #14202e;
-    /* Color-matched darker border */
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -82,25 +81,66 @@ body {
     margin: 3rem auto;
 }
 
-/* --- Split Container (Home Page) --- */
+/* --- Temporary Midterm Project Banner --- */
+.temp-banner {
+    background-color: #ffffff;
+    border: 2px dashed #1f3044;
+    border-left: 6px solid #1f3044;
+    border-radius: 12px;
+    padding: 1.25rem 1.75rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 6px 16px rgba(31, 48, 68, 0.08);
+}
+
+.banner-label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1f3044;
+    margin-bottom: 0.3rem;
+}
+
+.temp-banner p {
+    color: #000000;
+    font-size: 1.05rem;
+}
+
+.midterm-link {
+    color: #1f3044;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 0.3rem;
+    transition: color 0.2s ease;
+}
+
+.midterm-link:hover {
+    color: #14202e;
+}
+
+/* --- Split Container (Home & Contact Pages) --- */
 .split-container {
     display: flex;
     gap: 2.5rem;
     align-items: stretch;
+    /* Forces equal height for both boxes */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .image-box {
-    flex: 1.2;
+    flex: 1;
+    /* Equal 50/50 width split */
     background-color: #ffffff;
     border: 2px solid #1f3044;
-    /* Darker steel navy border */
     border-radius: 12px;
-    padding: 1.25rem;
+    padding: 1.5rem;
     box-shadow: 0 8px 20px rgba(31, 48, 68, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: 520px;
+    min-height: 520px;
+    /* Larger, balanced box size */
     overflow: hidden;
 }
 
@@ -112,26 +152,25 @@ body {
     display: block;
     border-radius: 8px;
     background-color: transparent;
-    /* No color box around photos */
 }
 
 .text-content {
-    flex: 1.2;
+    flex: 1;
+    /* Equal 50/50 width split */
     background-color: #ffffff;
     color: #000000;
     border: 2px solid #1f3044;
-    /* Darker steel navy border */
     border-radius: 12px;
     padding: 3rem;
     box-shadow: 0 8px 20px rgba(31, 48, 68, 0.1);
-    min-height: 480px;
+    min-height: 520px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .text-content h2 {
-    font-size: 2rem;
+    font-size: 2.25rem;
     color: #1f3044;
     margin-bottom: 1.5rem;
     border-bottom: 2px solid #1f3044;
@@ -183,7 +222,6 @@ body {
     min-width: 200px;
     background-color: #ffffff;
     border: 2px solid #1f3044;
-    /* Darker steel navy border */
     border-radius: 12px;
     padding: 0.75rem;
     text-align: center;
@@ -198,7 +236,6 @@ body {
     display: block;
     border-radius: 8px;
     background-color: transparent;
-    /* No color box around photos */
 }
 
 .photo-card:hover,
@@ -241,59 +278,66 @@ body {
     color: #000000;
 }
 
-/* --- Contact Form Styles --- */
-.form-box {
+/* --- Contact Box (Equal 50/50 Box Matching Image Box) --- */
+.contact-box {
     flex: 1;
+    /* Equal 50/50 width split */
+    width: 100%;
+    max-width: none;
+    margin: 0;
     background-color: #ffffff;
     border: 2px solid #1f3044;
     border-radius: 12px;
-    padding: 2rem;
+    padding: 3rem;
     box-shadow: 0 8px 20px rgba(31, 48, 68, 0.1);
-}
-
-.contact-form {
+    min-height: 520px;
+    /* Matches image-box height */
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    justify-content: center;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 0.75rem;
-    border: 1px solid #1f3044;
-    border-radius: 6px;
-    background-color: #ffffff;
+.contact-box h2 {
+    font-size: 2.25rem;
+    color: #1f3044;
+    margin-bottom: 1.25rem;
+    border-bottom: 2px solid #1f3044;
+    padding-bottom: 0.5rem;
+}
+
+.contact-box p {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-list li {
+    font-size: 1.25rem;
     color: #000000;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #1f3044;
-    box-shadow: 0 0 0 3px rgba(31, 48, 68, 0.2);
-}
-
-.submit-btn {
-    background-color: #1f3044;
-    color: #ffffff;
-    padding: 0.9rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+.contact-list a {
+    color: #1f3044;
     font-weight: bold;
-    font-size: 1rem;
-    box-shadow: 0 4px 10px rgba(31, 48, 68, 0.25);
-    transition: background-color 0.2s ease;
+    text-decoration: underline;
+    transition: color 0.2s ease;
 }
 
-.submit-btn:hover {
-    background-color: #14202e;
+.contact-list a:hover {
+    color: #14202e;
 }
 
 /* --- Footer & Portal Link --- */
 .main-footer {
     background-color: #1f3044;
-    /* Darker steel navy */
     color: #ffffff;
     border-top: 3px solid #14202e;
     padding: 1.5rem 1.25rem;
@@ -328,7 +372,8 @@ body {
     }
 
     .image-box,
-    .text-content {
+    .text-content,
+    .contact-box {
         min-height: auto;
         padding: 1.5rem;
     }
