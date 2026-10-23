@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calm Study Lounge</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f1f5f2;
+            color: #26352f;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero-section {
+            position: relative;
+            background-color: #31483e;
+            color: #ffffff;
+            min-height: 42vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            object-fit: cover;
+        }
+
+        .hero-section::before {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(110deg, rgba(23, 43, 34, 0.72), rgba(35, 55, 47, 0.35));
+            content: "";
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #ced4da;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background / Hero Video Header (Muted, Autoplaying, Looping) -->
+    <header class="hero-section text-center py-5 mb-5">
+        <video autoplay muted loop playsinline class="hero-video" aria-hidden="true">
+            <source src="nature-background.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+        <div class="container hero-content px-3">
+            <h1 class="display-4 fw-bold text-white">Calm Study Lounge</h1>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+        <div class="row g-4">
+
+            <!-- Video / YouTube iFrame Embed (Responsive 16x9 container) -->
+            <div class="col-lg-8">
+                <div class="card p-4 h-100">
+                    <h2 class="h5 mb-3 text-dark">YouTube Video Embed</h2>
+                    <div class="ratio ratio-16x9 rounded overflow-hidden border">
+                        <iframe src="https://www.youtube.com/embed/vCTRNKPJr40" title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audio Player Integration (Native <audio controls> with fallback text) -->
+            <div class="col-lg-4">
+                <div class="card p-4 h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <h2 class="h5 mb-3 text-dark">Audio Player</h2>
+                    </div>
+                    <div class="mt-3">
+                        <audio controls class="w-100">
+                            <source src="leberch-calm-calm-music-595679.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Navigation & Portal Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-2 text-white-50">&copy; 2026 ADD 103 Media Lounge</p>
+            <a href="../../index.html" class="text-white text-decoration-none">Back to Student Portal</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
