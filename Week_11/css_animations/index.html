@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11B: Spooky Haunted Mansion - Animista Showcase</title>
+    <!-- Linked external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="haunted-header">
+        <h1 id="haunted-title" class="tracking-in-expand-fwd">Haunted House</h1>
+    </header>
+
+    <main class="haunted-scene">
+        <div class="ghost-parade" aria-hidden="true">
+            <div class="ghost-slot"><svg class="ghost" viewBox="0 0 48 48" fill="currentColor">
+                    <path d="M24 4a16 16 0 0 0-16 16v22l6-4 5 4 5-4 5 4 5-4 5 4V20A16 16 0 0 0 24 4Z" />
+                    <circle cx="19" cy="20" r="1.5" fill="#26163f" />
+                    <circle cx="29" cy="20" r="1.5" fill="#26163f" />
+                </svg></div>
+            <div class="ghost-slot"><svg class="ghost" viewBox="0 0 48 48" fill="currentColor">
+                    <path d="M24 4a16 16 0 0 0-16 16v22l6-4 5 4 5-4 5 4 5-4 5 4V20A16 16 0 0 0 24 4Z" />
+                    <circle cx="19" cy="20" r="1.5" fill="#26163f" />
+                    <circle cx="29" cy="20" r="1.5" fill="#26163f" />
+                </svg></div>
+            <div class="ghost-slot"><svg class="ghost" viewBox="0 0 48 48" fill="currentColor">
+                    <path d="M24 4a16 16 0 0 0-16 16v22l6-4 5 4 5-4 5 4 5-4 5 4V20A16 16 0 0 0 24 4Z" />
+                    <circle cx="19" cy="20" r="1.5" fill="#26163f" />
+                    <circle cx="29" cy="20" r="1.5" fill="#26163f" />
+                </svg></div>
+            <div class="ghost-slot"><svg class="ghost" viewBox="0 0 48 48" fill="currentColor">
+                    <path d="M24 4a16 16 0 0 0-16 16v22l6-4 5 4 5-4 5 4 5-4 5 4V20A16 16 0 0 0 24 4Z" />
+                    <circle cx="19" cy="20" r="1.5" fill="#26163f" />
+                    <circle cx="29" cy="20" r="1.5" fill="#26163f" />
+                </svg></div>
+        </div>
+
+        <div class="crypt-row slide-in-top" aria-hidden="true">
+            <svg id="crypt-entry" class="tombstone" viewBox="0 0 100 120">
+                <path d="M20 112V48a30 30 0 0 1 60 0v64Z" fill="#776c83" stroke="#c9bdd4" stroke-width="3" />
+                <path d="M30 112V50a20 20 0 0 1 40 0v62Z" fill="#51475f" />
+                <path d="M39 54h22M39 64h22" stroke="#a99bb5" stroke-width="3" stroke-linecap="round" />
+            </svg>
+            <svg id="vanishing-stone" class="tombstone" viewBox="0 0 100 120">
+                <path d="M16 112V45a34 34 0 0 1 68 0v67Z" fill="#93869d" stroke="#d5c9dd" stroke-width="3" />
+                <path d="M27 112V47a23 23 0 0 1 46 0v65Z" fill="#5b5065" />
+                <text x="50" y="67" fill="#d5c9dd" font-family="Georgia, serif" font-size="15"
+                    text-anchor="middle">RIP</text>
+            </svg>
+            <svg class="tombstone" viewBox="0 0 100 120">
+                <path d="M22 112V50a28 28 0 0 1 56 0v62Z" fill="#776c83" stroke="#c9bdd4" stroke-width="3" />
+                <path d="M34 112V52a16 16 0 0 1 32 0v60Z" fill="#51475f" />
+                <path d="M42 54h16M42 63h16" stroke="#a99bb5" stroke-width="3" stroke-linecap="round" />
+            </svg>
+        </div>
+
+        <p id="haunt-status" class="haunt-status" aria-live="polite">The mansion is quiet... for now.</p>
+        <button id="spooky-button" class="spooky-button heartbeat" type="button" aria-pressed="false">Spooky:
+            Off</button>
+    </main>
+
+    <footer class="haunted-footer">
+        <a href="../../index.html">Back to Student Portal</a>
+    </footer>
+
+    <script>
+        const statusText = document.getElementById('haunt-status');
+        const spookyButton = document.getElementById('spooky-button');
+        const hauntedTitle = document.getElementById('haunted-title');
+        const ghostSlots = [...document.querySelectorAll('.ghost-slot')];
+        const middleGhosts = ghostSlots.slice(1, 3).map((slot) => slot.querySelector('.ghost'));
+        const flyingGhosts = [ghostSlots[0].querySelector('.ghost'), ghostSlots[3].querySelector('.ghost')];
+        const flyingGhostSlots = [ghostSlots[0], ghostSlots[3]];
+        let ghostsAwake = false;
+        let spinTimer;
+        let fadeEndHandler;
+
+        function replayAnimation(elementId, className) {
+            const element = document.getElementById(elementId);
+            element.classList.remove(className);
+            void element.offsetWidth;
+            element.classList.add(className);
+        }
+
+        function resetGhosts() {
+            window.clearTimeout(spinTimer);
+            if (fadeEndHandler) {
+                ghostSlots[3].removeEventListener('animationend', fadeEndHandler);
+            }
+            ghostSlots.forEach((slot) => slot.classList.remove('ghost-fade-in'));
+            middleGhosts.forEach((ghost) => ghost.classList.remove('rotate-center'));
+            flyingGhostSlots.forEach((slot) => slot.classList.remove('fade-out'));
+            flyingGhosts.forEach((ghost) => ghost.classList.remove('ghost-fly-left', 'ghost-fly-right'));
+        }
+
+        function wakeGhosts() {
+            resetGhosts();
+            void ghostSlots[0].offsetWidth;
+
+            fadeEndHandler = (event) => {
+                if (event.animationName !== 'ghost-fade-in') {
+                    return;
+                }
+
+                ghostSlots[3].removeEventListener('animationend', fadeEndHandler);
+                flyingGhostSlots.forEach((slot) => slot.classList.add('fade-out'));
+                flyingGhosts[0].classList.add('ghost-fly-right');
+                flyingGhosts[1].classList.add('ghost-fly-left');
+                spinTimer = window.setTimeout(() => {
+                    middleGhosts.forEach((ghost) => {
+                        ghost.classList.remove('rotate-center');
+                        void ghost.offsetWidth;
+                        ghost.classList.add('rotate-center');
+                    });
+                }, 1000);
+            };
+
+            ghostSlots[3].addEventListener('animationend', fadeEndHandler);
+            ghostSlots.forEach((slot) => {
+                slot.classList.add('ghost-fade-in');
+            });
+            replayAnimation('haunted-title', 'tracking-in-expand-fwd');
+        }
+
+        spookyButton.addEventListener('click', () => {
+            ghostsAwake = !ghostsAwake;
+            spookyButton.setAttribute('aria-pressed', String(ghostsAwake));
+
+            if (ghostsAwake) {
+                spookyButton.textContent = 'Spooky: On';
+                statusText.textContent = 'The spirits are watching...';
+                wakeGhosts();
+                return;
+            }
+
+            resetGhosts();
+            spookyButton.textContent = 'Spooky: Off';
+            statusText.textContent = 'The mansion is quiet... for now.';
+            replayAnimation('haunted-title', 'tracking-in-expand-fwd');
+        });
+    </script>
+</body>
+
+</html>
