@@ -39,7 +39,7 @@
         </nav>
     </header>
 
-    <main class="container my-5">
+    <main class="container">
         <div class="mb-4">
             <p class="fw-semibold mb-1">Guide Progress: Step 6 of 8 (75%)</p>
             <div class="progress" role="progressbar" aria-label="Guide progress" aria-valuenow="75" aria-valuemin="0"
@@ -48,22 +48,30 @@
             </div>
         </div>
 
-        <h1 class="text-forest mb-3">Moraine Hills Through the Seasons</h1>
-        <p class="lead">Preview morning lake reflections, wetland boardwalks, and seasonal park scenes.</p>
-        <div class="row g-3 mt-2">
-            <div class="col-md-4">
-                <img src="images/hero-lake-defiance.svg" class="img-fluid rounded border gallery-image"
-                    alt="Lake Defiance overlook at sunrise">
-            </div>
-            <div class="col-md-4">
-                <img src="images/trail-pike-marsh.svg" class="img-fluid rounded border gallery-image"
-                    alt="Wooden boardwalk across Pike Marsh">
-            </div>
-            <div class="col-md-4">
-                <img src="images/trail-mchenry-dam.svg" class="img-fluid rounded border gallery-image"
-                    alt="Trail near McHenry Dam and Fox River">
-            </div>
-        </div>
+        <h1 class="text-forest mb-2">Moraine Hills Through the Seasons</h1>
+        <p class="lead">Preview morning lake reflections, wetland boardwalks, wildlife, and trail gear.</p>
+
+        <section class="photo-gallery-grid" aria-label="Park Photo Grid">
+            <figure class="gallery-item mb-0">
+                <img src="images/hero-lake-defiance.svg" alt="Lake Defiance overlook at sunrise">
+                <figcaption class="small text-body-secondary">Sunrise over the glacial kettle lake on the Lake Defiance
+                    Loop.</figcaption>
+            </figure>
+
+            <figure class="gallery-item mb-0">
+                <img src="images/trail-pike-marsh.svg" alt="Wooden boardwalk cutting through Pike Marsh">
+                <figcaption class="small text-body-secondary">Elevated wooden boardwalk crossing the Pike Marsh
+                    leatherleaf bog.</figcaption>
+            </figure>
+
+            <figure class="gallery-item mb-0">
+                <img src="images/trail-mchenry-dam.svg" alt="Multi-use trail near McHenry Dam and Fox River">
+                <figcaption class="small text-body-secondary">Paved riverfront path leading toward the McHenry Dam
+                    overlook.</figcaption>
+            </figure>
+
+        </section>
+
         <div class="mt-4 d-flex gap-2">
             <a href="activities.html" class="btn btn-outline-secondary">Previous</a>
             <a href="safety.html" class="btn btn-forest">Next: Step 7 - Safety</a>
