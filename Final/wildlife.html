@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moraine Hills Explorer - Wildlife &amp; Birdwatching</title>
+    <!-- 1. BOOTSTRAP CDN (FIRST) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 2. CUSTOM CSS OVERRIDE (AFTER BOOTSTRAP) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-forest" href="index.html">Moraine Hills Explorer</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="lake-defiance.html">Lake Defiance</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pike-marsh.html">Pike Marsh</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mchenry-dam.html">McHenry Dam</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                href="wildlife.html">Wildlife</a></li>
+                        <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="safety.html">Safety</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <button id="themeToggle" type="button" class="btn btn-outline-secondary btn-sm">Dark Mode</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="mb-4">
+            <p class="fw-semibold mb-1">Guide Progress: Step 4 of 8 (50%)</p>
+            <div class="progress" role="progressbar" aria-label="Guide progress" aria-valuenow="50" aria-valuemin="0"
+                aria-valuemax="100" style="height: 22px;">
+                <div class="progress-bar progress-bar-forest" style="width: 50%">50%</div>
+            </div>
+        </div>
+
+        <h1 class="text-forest mb-3">Park Wildlife &amp; Seasonal Habitats</h1>
+        <p class="lead">Located along the Mississippi Flyway, Moraine Hills supports migratory birds, turtles, deer, and
+            prairie pollinators.</p>
+        <p>Bring binoculars in spring and fall for warblers, ospreys, and sandhill cranes, and watch for painted turtles
+            along sunny shorelines.</p>
+        <div class="mt-4 d-flex gap-2">
+            <a href="mchenry-dam.html" class="btn btn-outline-secondary">Previous</a>
+            <a href="activities.html" class="btn btn-forest">Next: Step 5 - Activities</a>
+        </div>
+    </main>
+
+    <footer class="bg-body-tertiary text-center py-4 border-top mt-5">
+        <div class="container">
+            <p class="mb-0 text-body-secondary">Moraine Hills Explorer | ADD 103 Capstone Project</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --color-primary: #2C5E3A;
+    --color-secondary: #8C6239;
+    --color-accent: #D4A373;
+    --font-heading: 'Lora', serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+.navbar-brand {
+    font-family: var(--font-heading);
+}
+
+.text-forest {
+    color: var(--color-primary);
+}
+
+.btn-forest {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+.btn-forest:hover {
+    background-color: #21472B;
+    border-color: #21472B;
+    color: #FFFFFF;
+}
+
+.progress-bar-forest {
+    background-color: var(--color-primary);
+}
+
+.gallery-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}

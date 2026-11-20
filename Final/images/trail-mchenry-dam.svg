@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title description">
+  <title id="title">McHenry Dam trail</title>
+  <desc id="description">An illustrated river trail beside a dam and blue water.</desc>
+  <rect width="800" height="600" fill="#bcd5de"/>
+  <rect y="330" width="800" height="270" fill="#6c9ca8"/>
+  <path d="M0 310l210-70 180 85 150-120 260 80v105H0z" fill="#527b4e"/>
+  <rect x="470" y="250" width="250" height="210" rx="8" fill="#c7b69e"/>
+  <rect x="500" y="280" width="190" height="25" fill="#8c6239"/>
+  <g stroke="#e6edf0" stroke-width="12">
+    <path d="M480 370h210M480 410h210M480 450h210"/>
+  </g>
+  <path d="M0 520c170-45 320 30 480-10s220-20 320 10v80H0z" fill="#d2c0a0"/>
+</svg>

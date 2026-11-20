@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title description">
+  <title id="title">Pike Marsh boardwalk</title>
+  <desc id="description">An illustrated wooden boardwalk crossing a marsh.</desc>
+  <rect width="800" height="600" fill="#b8d0aa"/>
+  <rect y="300" width="800" height="300" fill="#83aaa0"/>
+  <g fill="#315d3a">
+    <path d="M70 320c20-100 75-140 120-110-35 35-45 95-35 160z"/>
+    <path d="M640 340c10-120 70-170 120-140-45 45-50 105-35 180z"/>
+  </g>
+  <path d="M300 600l50-300h100l50 300z" fill="#9a7448"/>
+  <g stroke="#66472e" stroke-width="8">
+    <path d="M305 550h190M315 500h170M325 450h150M335 400h130M345 350h110"/>
+  </g>
+  <g stroke="#d9c9a5" stroke-width="5">
+    <path d="M300 600l50-300M500 600l-50-300"/>
+  </g>
+</svg>

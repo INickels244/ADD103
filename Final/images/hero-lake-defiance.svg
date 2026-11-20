@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title description">
+  <title id="title">Lake Defiance at sunrise</title>
+  <desc id="description">An illustrated lake surrounded by green woodland hills.</desc>
+  <rect width="800" height="600" fill="#b7d6df"/>
+  <circle cx="610" cy="130" r="70" fill="#f6d98b"/>
+  <path d="M0 280L150 150l130 130l120-105l180 105l100-80l120 100v300H0z" fill="#4f7a50"/>
+  <path d="M0 330c160-40 300-25 430 10s250 30 370-5v265H0z" fill="#2c5e3a"/>
+  <path d="M0 380c180-30 300 40 470 5s250-30 330 5v210H0z" fill="#78a8ae"/>
+  <path d="M0 430c180-35 330 35 500 0s210-10 300 10" fill="none" stroke="#dce8e4" stroke-width="12"/>
+  <path d="M250 600l95-250h110l105 250z" fill="#8c6239"/>
+</svg>
