@@ -2,16 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-    --color-primary: #2C5E3A;
-    --color-secondary: #8C6239;
-    --color-accent: #D4A373;
+    --brand-primary: #2C5E3A;
+    --brand-primary-hover: #21472B;
+    --brand-secondary: #8C6239;
+    --brand-accent: #D4A373;
+    --brand-bg: #f8fafc;
     --font-heading: 'Lora', serif;
     --font-body: 'Open Sans', sans-serif;
+}
+
+[data-bs-theme="dark"] {
+    --brand-bg: #212529;
+}
+
+[data-bs-theme="dark"] .text-forest {
+    color: var(--brand-accent) !important;
 }
 
 /* Global Page Flexbox Layout (Sticky Footer Architecture) */
 body {
     font-family: var(--font-body);
+    background-color: var(--brand-bg);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -28,8 +39,69 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 .navbar-brand {
     font-family: var(--font-heading);
+}
+
+/* Bootstrap theme overrides */
+.btn-primary,
+.btn-forest {
+    --bs-btn-focus-shadow-rgb: 44, 94, 58;
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible,
+.btn-forest:hover,
+.btn-forest:focus-visible {
+    background-color: var(--brand-primary-hover);
+    border-color: var(--brand-primary-hover);
+    color: #FFFFFF;
+}
+
+.btn-outline-secondary {
+    --bs-btn-focus-shadow-rgb: 140, 98, 57;
+    color: var(--brand-secondary);
+    border-color: var(--brand-secondary);
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus-visible {
+    background-color: var(--brand-secondary);
+    border-color: var(--brand-secondary);
+    color: #FFFFFF;
+}
+
+.navbar.bg-body-tertiary {
+    background-color: var(--brand-primary) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #FFFFFF;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible,
+.navbar .nav-link.active {
+    color: var(--brand-accent);
+}
+
+.navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.55);
+}
+
+.navbar .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+a:not(.btn):hover,
+a:not(.btn):focus-visible {
+    color: var(--brand-secondary);
 }
 
 /* Flexbox Navigation Bar Alignment */
@@ -100,24 +172,15 @@ h4,
 
 /* Theme Accent Utilities */
 .text-forest {
-    color: var(--color-primary);
+    color: var(--brand-primary);
 }
 
 .btn-forest {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-    color: #FFFFFF;
     padding: 0.5rem 1.25rem;
 }
 
-.btn-forest:hover {
-    background-color: #21472B;
-    border-color: #21472B;
-    color: #FFFFFF;
-}
-
 .progress-bar-forest {
-    background-color: var(--color-primary);
+    background-color: var(--brand-primary);
 }
 
 /* Responsive Breakpoints */
