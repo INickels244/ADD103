@@ -6,6 +6,7 @@
     --brand-primary-hover: #21472B;
     --brand-secondary: #8C6239;
     --brand-accent: #D4A373;
+    --brand-on-primary: #F5D6A0;
     --brand-bg: #f8fafc;
     --font-heading: 'Lora', serif;
     --font-body: 'Open Sans', sans-serif;
@@ -88,7 +89,19 @@ h6,
 .navbar .nav-link:hover,
 .navbar .nav-link:focus-visible,
 .navbar .nav-link.active {
-    color: var(--brand-accent);
+    color: var(--brand-on-primary);
+}
+
+.navbar .btn-outline-secondary {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.navbar .btn-outline-secondary:hover,
+.navbar .btn-outline-secondary:focus-visible {
+    color: var(--brand-primary);
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
 }
 
 .navbar .navbar-toggler {
